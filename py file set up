@@ -1,0 +1,56 @@
+server.py
+#listen for client connect 
+connect()
+RECIVE authentication level, user name, ldap_auth(T/F) to server 
+if ldap_auth = true 
+  send ldap_auth_frome server = true
+def user_input():
+    while True:
+      s.recv(command)
+      client_input = command
+        if client_input == "q":
+            break
+        elif command == "download":
+            download()
+        elif command == "upload":
+           upload()
+       elif command == "delete":
+           delete()
+
+
+client.py
+#connect to the server 
+connect()
+#suthenticate to ldap 
+ldap_auth()
+define user name
+define authentication level
+define ldap_auth(T/F)
+send authentication level, user name, ldap_auth(T/F) to server
+RECIVE ldap_auth_frome server = true
+if ldap_auth_frome server = true
+  user_input()
+def user_input(): 
+  while True:
+      command = input()
+      s.send(command)
+      if command == "q":
+          break
+      elif command == "help":
+          download -> Download A file From Server 
+          upload -> Upload A file To Server
+          delete -> Upload A file from Server
+      elif command == "download":
+        s.send(download)
+        download()
+      elif command == "upload":
+        s.send(upload)
+        upload()
+      elif command == "delete":
+        s.send(delete)
+        delete()
+      elif 
+        print('can not exicute command')
+def download()
+def upload()
+def delete()
