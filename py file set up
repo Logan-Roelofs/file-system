@@ -4,6 +4,7 @@ connect()
 RECIVE authentication level, user name, ldap_auth(T/F) to server 
 if ldap_auth = true 
   send ldap_auth_frome server = true
+  user_input()
 def user_input():
     while True:
       s.recv(command)
@@ -16,6 +17,9 @@ def user_input():
            upload()
        elif command == "delete":
            delete()
+def download()
+def upload()
+def delete()
 
 
 client.py
@@ -33,7 +37,6 @@ if ldap_auth_frome server = true
 def user_input(): 
   while True:
       command = input()
-      s.send(command)
       if command == "q":
           break
       elif command == "help":
